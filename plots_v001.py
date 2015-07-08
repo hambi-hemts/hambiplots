@@ -9,7 +9,7 @@ import glob
 import os
 
 png_backup = {key:plt.rcParams[key] for key in plt.rcParams}
-from hambi_plots import glob_format
+from hambiplots import glob_format
 def figsize_pgf(scale):
     fig_width_pt = 417.473 #469.755                          # Get this from LaTeX using \the\textwidth
     inches_per_pt = 1.0/72.27                       # Convert pt to inch
