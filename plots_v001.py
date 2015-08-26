@@ -66,7 +66,7 @@ def savefig_format(filename,
         filename = filename[:-4]
         if glob_format != desired_format:
             set_format(desired_format)
-            print "Changed output format to ", desired_format
+            print("Changed output format to ", desired_format)
     
     #####
     ### check if a folder for the respective format exists:
