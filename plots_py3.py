@@ -21,13 +21,16 @@ def set_yaxis_unit(name = '', scale_factor = 1.0):
     yt = yt[1:]
     yticks(yt, [str(x*scale_factor) + name for x in yt])
     
-def style(name = 'seaborn'):
+def style(name = 'seaborn', option = 'legend_inside'):
     if name == 'seaborn':
         ax = plt.gca()
         ax.spines['right'].set_visible(False)
         ax.spines['top'].set_visible(False)
-        ax.legend(bbox_to_anchor=(1.0, 1.0),
-                  ncol=1, fancybox=True, shadow=True, frameon = False, framealpha = 1.0)
+        
+    if option == 'legend_outside':
+        ax.legend(bbox_to_anchor=(1.0, 1.0), ncol=1, fancybox=True, shadow=True, frameon = False, framealpha = 1.0)
+    elif option == 'legend_inside':
+        ax.legend(loc = 'best', ncol=1, fancybox=True, shadow=True, frameon = False, framealpha = 1.0)
 
 def set_color_palette(n=8, name = "husl"):
     """ 
