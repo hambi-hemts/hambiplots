@@ -233,7 +233,7 @@ def make_misc():
 
     pp.subplot(2, 2, 1, projection="smith", plot_hacklines=True)
     plot_example()
-    pp.legend(["S11", "S22", "Polyline", "Z \u2192 0.125l/\u03BB"])
+    pp.legend(["S11", "S22", "Polyline", "Z \\u2192 0.125l/\\u03BB"])
     pp.title("Legend")
 
     divs = [2, 5]
@@ -267,7 +267,7 @@ if __name__ == '__main__':
 
         p = Pool(pool.cpu_count())
         r = []
-        for key, func in locals().copy().items():
+        for key, func in list(locals().copy().items()):
             if isinstance(func, FunctionType) and "make_" in key:
                 r += [p.apply_async(func, {})]
 

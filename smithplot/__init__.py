@@ -1,5 +1,5 @@
 from matplotlib.projections import register_projection
-from smithplot.smithaxes import SmithAxes
+from hambiplots.smithplot.smithaxes import SmithAxes
 import matplotlib
 
 # check version requierment
